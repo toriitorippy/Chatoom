@@ -1,0 +1,59 @@
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="/assets/rakusu.png" width="35" height="35" class="d-inline-block align-top" alt="">
+        <span style="font-size : xx-large">
+            Chatoom
+        </span>
+    </a>
+    <span class="navbar-text" style="font-size : xx-large">
+        Room {{roomId}}
+        <input id="roomId" type="hidden" value="{{roomId}}">
+    </span>
+    <button class="btn btn-outline-danger my-2 my-sm-0" type="button" value="退室する" onclick="exit();">退出する</button>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            ビデオ通話表示の場所
+            <div>
+                <button onclick="switchStream();">ミュート</button>
+            </div>
+            <video id="local" playsinline autoplay muted class="mw-100 mh-100 w-100 bg-dark" poster="/assets/video_slash.png"></video>
+            <div id="remote"></div>
+        </div>
+        <div class="col-sm-8">
+            <form method="post" action="/">
+                <div class="card scroll">
+                    <div class="room-thread">
+                        <div id="thread"></div>
+                    </div>
+                </div>
+                <div class="room-login_user">
+                    ログインユーザ：{{userName}} さん
+                    <input id="userName" type="hidden" value="{{userName}}">
+                </div>
+                <div class="in-login_user">
+                    ログイン中ユーザ：
+                    <div id="in_login_list"></div>
+                </div>
+                <div class="room-message">
+                    <textarea id="message" rows="4" class="room-message_textarea" placeholder="投稿文を入力してください">
+                    </textarea>
+                </div>
+                <div class="room-submit">
+                    <input type="button" value="投稿" class="common-button room-publish_button" onclick="publish();">
+                    <input type="button" value="メモ" class="common-button room-memo_button" onclick="memo();">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/socket.js"></script>
+<script src="/javascripts/enter.js"></script>
+<script src="/javascripts/publish.js"></script>
+<script src="/javascripts/memo.js"></script>
+<script src="/javascripts/exit.js"></script>
+<script src="/javascripts/webrtcv2.js"></script>

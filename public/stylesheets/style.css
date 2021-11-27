@@ -1,0 +1,146 @@
+/*
+ * 画面全体に関する設定
+ */
+body {
+    font: 14px "Lucida Grande", Meiryo, Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+div {
+    margin: 20px 0px;
+}
+
+.row {
+    margin: 20px;
+}
+
+/*
+ * ボタンの共通設定
+ */
+.common-button {
+
+}
+
+/*
+ * トップ画面（index.hbs）に関する設定
+ */
+.index-user_name {
+
+}
+
+.index-user_name_text {
+    width: 200px;
+}
+
+.index-enter {
+
+}
+
+.index-enter_button {
+
+}
+
+/*
+ * チャットルーム画面（room.hbs）に関する設定
+ */
+.room-login_user {
+
+ }
+
+.room-message {
+
+}
+
+.room-message_textarea {
+    width: 500px;
+}
+
+.room-submit {
+
+}
+
+.room-publish_button {
+
+}
+
+.room-memo_button {
+
+}
+
+.room-thread {
+}
+
+.room-exit {
+
+}
+
+.room-exit_button {
+
+}
+.scroll {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+}
+
+/* https://qiita.com/yushimizu/items/c690b482e2a8690ffd71 */
+.panel {
+    margin: 0;
+    background-image: url("../images/background_sky.jpg");
+}
+
+.panel-body {
+    height: 400px;
+    overflow: auto;
+}
+
+.chatBox {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+
+.chatBalloon {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 3px;
+    background-color: white;
+}
+
+.mychatBox {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: right; 
+}
+
+.mychatBalloon {
+    max-width: 50%;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 3px;
+    background-color: Lime;
+}
+
+.mybot {
+    float: right;
+    display: inline-block;
+}
+.bot {
+    float: left;
+    display: inline-block;
+}
+
+.usr {
+    float: right;
+    background-color: Lime;
+}
+
+.inputText {
+    text-align: right;
+}
